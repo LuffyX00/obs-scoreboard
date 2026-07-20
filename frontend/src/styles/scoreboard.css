@@ -1,0 +1,320 @@
+.obs-page {
+  width: 100vw;
+  height: 100vh;
+  background: #000;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.scoreboard-stage {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.brand-logo {
+  position: absolute;
+  top: 28px;
+  right: 48px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 18px 8px;
+  border: 1px solid rgba(212, 175, 55, 0.55);
+  border-radius: 2px;
+  background: linear-gradient(180deg, rgba(20, 20, 20, 0.95), rgba(8, 8, 8, 0.95));
+  box-shadow: 0 0 18px rgba(212, 175, 55, 0.15);
+}
+
+.brand-logo__ag7 {
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  background: linear-gradient(180deg, #f5e6a8 0%, #c9a227 45%, #8b6914 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+  line-height: 1;
+}
+
+.brand-logo__vloss {
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: rgba(255, 255, 255, 0.85);
+  margin-top: 2px;
+}
+
+.scoreboard {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transform: translateY(-20px);
+}
+
+.live-badge {
+  position: absolute;
+  top: 18px;
+  left: -8px;
+  z-index: 5;
+  background: linear-gradient(180deg, #ff4d4d, #c41e1e);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  padding: 4px 12px;
+  border-radius: 4px;
+  box-shadow: 0 2px 8px rgba(255, 0, 0, 0.45);
+}
+
+.tournament-banner {
+  position: relative;
+  z-index: 2;
+  min-width: 340px;
+  padding: 8px 48px 10px;
+  text-align: center;
+  background: linear-gradient(180deg, #0a2a5e 0%, #061a3a 100%);
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  border-bottom: none;
+  border-radius: 8px 8px 0 0;
+  clip-path: polygon(8% 0, 92% 0, 100% 100%, 0 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+.tournament-banner span {
+  font-size: 15px;
+  font-weight: 700;
+  letter-spacing: 2.5px;
+  color: rgba(255, 255, 255, 0.95);
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
+}
+
+.main-bar {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  min-width: 600px;
+  padding: 14px 22px;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, transparent 40%),
+    linear-gradient(180deg, #111 0%, #050505 100%);
+  border: 2px solid transparent;
+  border-image: linear-gradient(
+      180deg,
+      #f5e6a8 0%,
+      #c9a227 35%,
+      #8b6914 70%,
+      #c9a227 100%
+    )
+    1;
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.8),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06),
+    0 0 24px rgba(201, 162, 39, 0.12);
+}
+
+.team-block {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.team-block--home {
+  justify-content: flex-start;
+}
+
+.team-block--away {
+  justify-content: flex-end;
+}
+
+.flag {
+  width: 52px;
+  height: 34px;
+  border-radius: 2px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.5);
+  flex-shrink: 0;
+  object-fit: cover;
+}
+
+.flag--country {
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.club-badge {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid rgba(255, 255, 255, 0.25);
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.55);
+  flex-shrink: 0;
+}
+
+.club-badge__text {
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #fff;
+  text-shadow: 0 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+.team-labels {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 120px;
+}
+
+.team-labels--away {
+  align-items: flex-end;
+  text-align: right;
+}
+
+.team-code {
+  font-size: 30px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: #fff;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.8);
+  line-height: 1;
+}
+
+.team-name {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.72);
+  text-transform: uppercase;
+  max-width: 140px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.team-score {
+  font-size: 56px;
+  font-weight: 1000;
+  line-height: 1;
+  color: #fff;
+  text-shadow: 0 3px 8px rgba(0, 0, 0, 0.9);
+  min-width: 48px;
+  text-align: center;
+}
+
+.score-center {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 18px;
+  color: #d4af37;
+}
+
+.score-dash {
+  font-size: 28px;
+  font-weight: 700;
+  color: rgba(212, 175, 55, 0.85);
+  line-height: 1;
+}
+
+.trophy-icon {
+  width: 70px;
+  height: 70px;
+  filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.6));
+}
+
+.timer-panel {
+  position: relative;
+  z-index: 1;
+  margin-top: -2px;
+  min-width: 180px;
+  padding: 10px 36px 12px;
+  text-align: center;
+  background: linear-gradient(180deg, #0a2a5e 0%, #051530 100%);
+  border: 1px solid rgba(212, 175, 55, 0.45);
+  border-top: none;
+  clip-path: polygon(0 0, 100% 0, 88% 100%, 12% 100%);
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.6),
+    inset 0 -1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.timer-panel__time {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 6px;
+  font-size: 34px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  line-height: 1.1;
+  color: #fff;
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.8);
+}
+
+.timer-panel__added {
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  color: #ffd966;
+  text-shadow: 0 0 10px rgba(255, 217, 102, 0.45);
+}
+
+.timer-panel__period {
+  margin-top: 2px;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  color: rgba(255, 255, 255, 0.88);
+}
+
+/* .floor-glow {
+  position: absolute;
+  bottom: 18%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 420px;
+  height: 24px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(212, 175, 55, 0.35) 0%,
+    rgba(212, 175, 55, 0.08) 45%,
+    transparent 70%
+  );
+  pointer-events: none;
+} */
+
+@media (max-width: 900px) {
+  .main-bar {
+    min-width: 92vw;
+    padding: 12px 14px;
+  }
+
+  .team-code {
+    font-size: 24px;
+    min-width: 48px;
+  }
+
+  .team-score {
+    font-size: 42px;
+  }
+
+  .flag {
+    width: 42px;
+    height: 28px;
+  }
+
+  .brand-logo {
+    top: 16px;
+    right: 16px;
+    transform: scale(0.85);
+  }
+}
