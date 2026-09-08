@@ -147,6 +147,16 @@
   border: 1px solid rgba(255, 255, 255, 0.12);
 }
 
+.flag--club {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #ffffff;
+  padding: 3px;
+  object-fit: contain;
+  /* border: 1px solid rgba(255, 255, 255, 0.12); */
+}
+
 .club-badge {
   width: 52px;
   height: 52px;

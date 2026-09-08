@@ -11,6 +11,23 @@ export function TeamEmblem({ team }) {
     );
   }
 
+  if (team.type === "club" && team.logo_url) {
+    return (
+      <img
+        src={team.logo_url}
+        alt={`${team.name} badge`}
+        className="flag flag--club"
+        onError={(e) => {
+          // If the logo image fails to load (broken URL, blocked request,
+          // domain with no logo, etc.), hide it and reveal the colored
+          // fallback badge sitting right after it in the DOM.
+          e.currentTarget.style.display = "none";
+          e.currentTarget.nextSibling.style.display = "flex";
+        }}
+      />
+    );
+  }
+
   return (
     <div
       className="club-badge"
